@@ -61,7 +61,7 @@
 </head>
 <body>
 
-       <div id="movies"><h1>_ _ _ _ _ _</h1></div>
+       <div id="hangmanInterface"><h1>Press 'space' to begin!</h1></div>
        
        
        
@@ -69,43 +69,78 @@
 
             
 
-           var answer = "Movies"
+            var answer = "Get Out";
+            
+            var answerArray = answer.split("");
+
+            
+
+            var blank = " _ "
+
+            answerArray.forEach(function(letter) {
+                console.log(letter);
+                console.log(blank);
+                document.write = blank;
+            });
+
+           
+
+
+            // var apps = ['WhatsApp', 'Instagram', 'Facebook'];
+            // var playStore = [];
+
+            // apps.forEach(function(item){
+            // playStore.push(item)
+            // });
+
+            // console.log(playStore);
+           
+
+                  
+    
+
+                //change "press s key to begin" to "_ _ _ _ _" where.....
+                // .....it pulls the answerArray and displays a "_" for each index
+
         
             // This function is run whenever the user presses a key.
             document.onkeyup = function(event) {
         
-              // Determines which key was pressed.
                 var userGuess = event.key;
+
+            //   if userGuess = a letter in answerArray, then 
+            // alert ("there is" however many in answerArray ".");
+            // change corresponding "_" to display indexed letter from answerArray
         
               // Only run the following code block if the user presses "r" or "p" or "s".
               if (userGuess === "m") {
                 alert("There is one M.");
-                document.getElementById("movies").innerHTML = "<h1>M _ _ _ _ _</h1>";
+                document.getElementById("hangmanInterface").innerHTML = "<h1>M _ _ _ _ _</h1>";
                 }
 
                  if (userGuess === "o") {
                 alert("There is one O.");
-                document.getElementById("movies").innerHTML = "<h1>M o _ _ _ _</h1>";
+                document.getElementById("hangmanInterface").innerHTML = "<h1>M o _ _ _ _</h1>";
                 }
 
                  if (userGuess === "v") {
                 alert("There is one V.");
-                document.getElementById("movies").innerHTML = "<h1>M o v _ _ _</h1>";
+                document.getElementById("hangmanInterface").innerHTML = "<h1>M o v _ _ _</h1>";
                 }
 
                  if (userGuess === "i") {
                 alert("There is one I.");
-                document.getElementById("movies").innerHTML = "<h1>M o v i _ _</h1>";
+                document.getElementById("hangmanInterface").innerHTML = "<h1>M o v i _ _</h1>";
                 }
 
                  if (userGuess === "e") {
                 alert("There is one E.");
-                document.getElementById("movies").innerHTML = "<h1>M o v i e _</h1>";
+                document.getElementById("hangmanInterface").innerHTML = "<h1>M o v i e _</h1>";
                 }
 
                  if (userGuess === "s") {
                 alert("There is one S.");
-                document.getElementById("movies").innerHTML = "<h1>M o v i e s</h1>";
+                document.getElementById("hangmanInterface").innerHTML = "<h1>M o v i e s</h1>";
                 }
 
                 if ((userGuess !== "m") || (userGuess !== "o") || (userGuess !== "v")  || (userGuess !== "i") || (userGuess !== "e") || (userGuess !== "s")){
