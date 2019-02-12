@@ -1,56 +1,3 @@
-<!-- 1. [Watch the demo](https://youtu.be/W-IJcC4tYFI).
-
-2. Choose a theme for your game! In the demo, we picked an 80s theme: 80s questions, 80s sound and an 80s aesthetic. You can choose any subject for your theme, though, so be creative!
-
-3. Use key events to listen for the letters that your players will type.
-
-4. Display the following on the page:
-
-5. Press any key to get started!
-
-6. Wins: (# of times user guessed the word correctly).
-
-   * If the word is `madonna`, display it like this when the game starts: `_ _ _ _ _ _ _`.
-
-   * As the user guesses the correct letters, reveal them: `m a d o _  _ a`.
-
-7. Number of Guesses Remaining: (# of guesses remaining for the user).
-
-8. Letters Already Guessed: (Letters the user has guessed, displayed like `L Z Y H`).
-
-9. After the user wins/loses the game should automatically choose another word and make the user play it. -->
-
-
-
-<!-- Theme: Movies! 
-
-    Screen should include instructions (hit keys to guess letters);
-    "_ _ _ _ _ _ _ _ _ " for guessing; 
-    Counter of guesses;
-    Guesses remaining;
-    Hangman figure that changes for wrong guesses?;
-    letters already guessed - adding letters in correctly for spaces;
-    Number of wins and loses;
-    Celebration when guesses correctly?;
-    If user wins, a winning screen (and play again?);
-    If user loses, a too bad try again screen;
-
-    functions:
-    user input letters
-
-
-
-
-
-
-
-
--->
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,13 +14,17 @@
 
     <div id="interface"><button type="button" class="btn btn-dark" onclick="startGame()">Click to begin!</button></div>
        
-    <div>Guesses Left: <div id="guessesLeftBox">6</div></div>
+    <div>Guesses Left: <p id="guessesLeftBox">6</p></div>
 
-    <div>Wrong Guesses: <div id="wrongGuessesBox"></div></div>
+    <div>Wrong Guesses: <p id="wrongGuessesBox"></p></div>
 
-    <div>Wins: <div id="winsBox">0</div></div>
+    <div>Wins: <p id="winsBox">0</p></div>
 
-    <div>Losses: <div id="lossesBox">0</div></div>
+    <div>Losses: <p id="lossesBox">0</p></div>
+
+    <div id="hintBox"></div>
+
+    <div id="hintBox2"></div>
 
 
     <div><img id="hangmanPic" src="assets/images/Hangman/Hangman-0.png" alt="Hangman Picture"></div>
