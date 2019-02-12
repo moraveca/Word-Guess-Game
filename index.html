@@ -58,105 +58,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movies Hangman</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+
 </head>
 <body>
 
-       <div id="hangmanInterface"><h1>Press 'space' to begin!</h1></div>
+    <div id="interface"><button type="button" class="btn btn-dark" onclick="startGame()">Click to begin!</button></div>
+       
+    <div>Guesses Left: <div id="guessesLeftBox">6</div></div>
+
+    <div>Wrong Guesses: <div id="wrongGuessesBox"></div></div>
+
+    <div>Wins: <div id="winsBox">0</div></div>
+
+    <div>Losses: <div id="lossesBox">0</div></div>
+
+
+    <div><img id="hangmanPic" src="assets/images/Hangman/Hangman-0.png" alt="Hangman Picture"></div>
+
+      
        
        
-       
-       <script type="text/javascript">
 
-            
-
-            var answer = "Get Out";
-            
-            var answerArray = answer.split("");
-
-            
-
-            var blank = " _ "
-
-            answerArray.forEach(function(letter) {
-                console.log(letter);
-                console.log(blank);
-                document.write = blank;
-            });
-
-           
-
-
-            // var apps = ['WhatsApp', 'Instagram', 'Facebook'];
-            // var playStore = [];
-
-            // apps.forEach(function(item){
-            // playStore.push(item)
-            // });
-
-            // console.log(playStore);
-           
-
-                  
-    
-
-                //change "press s key to begin" to "_ _ _ _ _" where.....
-                // .....it pulls the answerArray and displays a "_" for each index
-
-        
-            // This function is run whenever the user presses a key.
-            document.onkeyup = function(event) {
-        
-                var userGuess = event.key;
-
-            //   if userGuess = a letter in answerArray, then 
-            // alert ("there is" however many in answerArray ".");
-            // change corresponding "_" to display indexed letter from answerArray
-        
-              // Only run the following code block if the user presses "r" or "p" or "s".
-              if (userGuess === "m") {
-                alert("There is one M.");
-                document.getElementById("hangmanInterface").innerHTML = "<h1>M _ _ _ _ _</h1>";
-                }
-
-                 if (userGuess === "o") {
-                alert("There is one O.");
-                document.getElementById("hangmanInterface").innerHTML = "<h1>M o _ _ _ _</h1>";
-                }
-
-                 if (userGuess === "v") {
-                alert("There is one V.");
-                document.getElementById("hangmanInterface").innerHTML = "<h1>M o v _ _ _</h1>";
-                }
-
-                 if (userGuess === "i") {
-                alert("There is one I.");
-                document.getElementById("hangmanInterface").innerHTML = "<h1>M o v i _ _</h1>";
-                }
-
-                 if (userGuess === "e") {
-                alert("There is one E.");
-                document.getElementById("hangmanInterface").innerHTML = "<h1>M o v i e _</h1>";
-                }
-
-                 if (userGuess === "s") {
-                alert("There is one S.");
-                document.getElementById("hangmanInterface").innerHTML = "<h1>M o v i e s</h1>";
-                }
-
-                if ((userGuess !== "m") || (userGuess !== "o") || (userGuess !== "v")  || (userGuess !== "i") || (userGuess !== "e") || (userGuess !== "s")){
-                    alert("Nope! Try again.");
-                }
-
-                
-
-
-            };
-
-
-
-
-
-            </script>
     
 </body>
 </html>
