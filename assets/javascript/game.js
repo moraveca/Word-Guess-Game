@@ -116,6 +116,10 @@ function checkLetters(letter) {
 }
 
 
+
+
+
+
 function wholeGame() {
 
     randomAnswer = answer[Math.floor(Math.random() * answer.length)];
@@ -154,7 +158,18 @@ function wholeGame() {
 }
 
 function startGame(event) {
+
+    document.getElementById("interface").setAttribute("class", "m-auto");
     
     wholeGame();
 
 }
+
+
+
+// <button onclick="myFunction()">Try it</button>
+
+// <script>
+// function myFunction() {
+//   document.getElementsByTagName("H1")[0].setAttribute("class", "democlass"); 
+// }
