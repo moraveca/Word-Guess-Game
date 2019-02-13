@@ -14,13 +14,11 @@ function reset() {
     guessesRemaining = 6;
     wrongGuess = [];
     blanksAndCorrect = [];
-
     document.getElementById("startGame").classList.remove("d-none");
     document.getElementById("hintBox").innerHTML = "Hint:";
+    document.getElementById("hintBox2").innerHTML = "";
 
-    
-        
-    
+
 }
 
 function checkLetters(letter) {
@@ -104,15 +102,13 @@ function checkLetters(letter) {
         document.getElementById("hangmanPic").src = "assets/images/Hangman/Hangman-6.png";
 
         var lossSound = new Audio("assets/Sounds/Sad_Trombone.wav");
-        lossSound.play();
 
+        lossSound.play();
         losses++;
+        document.getElementById("lossesBox").innerHTML = losses;
         reset();
     }
 }
-
-
-
 
 function wholeGame() {
 
@@ -130,28 +126,22 @@ function wholeGame() {
     };
 
     document.getElementById("interface").innerHTML = " " + blanksAndCorrect.join(" ");
-
     console.log("answerArray:" + answerArray);
-
     document.onkeyup = function (event) {
         
         var capGuesses = String.fromCharCode(event.keyCode).toUpperCase();
 
         checkLetters(capGuesses);
-
         console.log("answerArray: " + answerArray);
         console.log("blanksAndCorrect (to match): " + blanksAndCorrect)
         if (answerArray.toString() === blanksAndCorrect.toString()) {
-            
             var winSound = new Audio("assets/sounds/1_person_cheering.wav");
             winSound.play();
             wins++;
+            document.getElementById("winsBox").innerHTML = wins;
             reset();
-        
         }
-     
     }
-
 }
 
 function startGame(event) {
@@ -160,5 +150,4 @@ function startGame(event) {
     document.getElementById("interface").setAttribute("class", "m-auto");
     
     wholeGame();
-
 }
