@@ -11,3 +11,20 @@ body {
                     linear-gradient(#eee .05em, transparent .05em) 0 0 / 100% 1.2em #fff;
     behavior: url(/pie/PIE.htc);
 }
+
+#titleCard {
+    font-family: 'Emblema One', cursive;
+    font-size: 100px;
+    /* background-image: url("assets/images/cinema_seats.jpg"); */
+}
+
+.jumbotron {
+    background-image: url("assets/images/cinema_seats.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   }
+
+#interface {
+    text-align: center;
+    font-size: 75px;
+}

@@ -109,13 +109,14 @@ function checkLetters(letter) {
 
     if (guessesRemaining === 0) {
         document.getElementById("hangmanPic").src = "assets/images/Hangman/Hangman-6.png";
-        alert("NOOOO! You lost.");
+
+        var lossSound = new Audio("assets/Sounds/Sad_Trombone.wav");
+        lossSound.play();
+
         losses++;
         reset();
     }
 }
-
-
 
 
 
@@ -148,7 +149,10 @@ function wholeGame() {
         console.log("answerArray: " + answerArray);
         console.log("blanksAndCorrect (to match): " + blanksAndCorrect)
         if (answerArray.toString() === blanksAndCorrect.toString()) {
-            alert("winner!");
+            
+            var winSound = new Audio("assets/sounds/1_person_cheering.wav");
+            winSound.play();
+    
             reset();
         
         }
@@ -164,12 +168,3 @@ function startGame(event) {
     wholeGame();
 
 }
-
-
-
-// <button onclick="myFunction()">Try it</button>
-
-// <script>
-// function myFunction() {
-//   document.getElementsByTagName("H1")[0].setAttribute("class", "democlass"); 
-// }
