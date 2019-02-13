@@ -15,19 +15,12 @@ function reset() {
     wrongGuess = [];
     blanksAndCorrect = [];
 
-    function resetButton() {
-        
-        var a = document.createElement("button");
-        var b = document.createTextNode("Click to begin!");
-        
-        a.appendChild(b);
-        document.getElementById("interface").appendChild(a);
-    }
+    document.getElementById("startGame").classList.remove("d-none");
+    document.getElementById("hintBox").innerHTML = "Hint:";
 
-    document.getElementById("winsBox").innerHTML = wins;
-    document.getElementById("lossesBox").innerHTML = losses;
-    wholeGame();
-    resetButton();
+    
+        
+    
 }
 
 function checkLetters(letter) {
@@ -152,7 +145,7 @@ function wholeGame() {
             
             var winSound = new Audio("assets/sounds/1_person_cheering.wav");
             winSound.play();
-    
+            wins++;
             reset();
         
         }
@@ -163,6 +156,7 @@ function wholeGame() {
 
 function startGame(event) {
 
+    document.getElementById("startGame").classList.add("d-none");
     document.getElementById("interface").setAttribute("class", "m-auto");
     
     wholeGame();

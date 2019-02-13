@@ -19,9 +19,10 @@ body {
 }
 
 .jumbotron {
-    background-image: url("assets/images/cinema_seats.jpg");
+    background-image: url("../images/theater-seat.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    color: #fff;
    }
 
 #interface {

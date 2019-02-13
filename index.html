@@ -24,36 +24,39 @@
         <div class="row">
             <div class="col-12">
                 <div class="container text-center" id="interface">
+                </div>
+                <div class="container text-center" id="startGame">
                     <button type="button" class="btn btn-dark btn-lg m-auto" onclick="startGame()">Click to begin!</button>
                 </div>
             </div>
         </div>
     </div>
-    
-            
-            
+    <br>
+    <br>
 
     <div class="container">
+        
         <div class="row">
-            <div class="col-lg-3">
-                <p id="hintBox"></p>
-                <p id="hintBox2"></p>
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                <img id="hangmanPic" src="assets/images/Hangman/Hangman-0.png" alt="Hangman Picture">
             </div>
 
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 border">
                 <p>Guesses Left: </p><p id="guessesLeftBox">6</p>
                 <p>Wrong Guesses: </p><p id="wrongGuessesBox"></p>
             </div>
 
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 border">
+                <p id="hintBox">Hint:</p>
+                <p id="hintBox2"></p>
+            </div>
+        
+            <div class="col-lg-2 col-md-6 col-sm-12 border">
                 <p>Wins: </p><p id="winsBox">0</p>
                 <p>Losses: </p><p id="lossesBox">0</p>
             </div>
-
-            <div class="col-lg-3">
-                <img id="hangmanPic" src="assets/images/Hangman/Hangman-0.png" alt="Hangman Picture">
-            </div>
         </div>
+
     </div>
 
       
