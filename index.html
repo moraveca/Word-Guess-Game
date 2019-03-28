@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Movies Hangman</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Emblema+One" rel="stylesheet">
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
+
 <body>
     <div class="jumbotron jumbotron-fluid text-center">
         <h1 id="titleCard">Movies HANGMAN</h1>
@@ -20,7 +23,8 @@
                 <div class="container text-center" id="interface">
                 </div>
                 <div class="container text-center" id="startGame">
-                    <button type="button" class="btn btn-dark btn-lg m-auto" onclick="startGame()">Click to begin!</button>
+                    <button type="button" class="btn btn-dark btn-lg m-auto" onclick="startGame()">Click to
+                        begin!</button>
                 </div>
             </div>
         </div>
@@ -33,18 +37,23 @@
                 <img id="hangmanPic" src="assets/images/Hangman/Hangman-0.png" alt="Hangman Picture">
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 border">
-                <p>Guesses Left: </p><p id="guessesLeftBox">6</p>
-                <p>Wrong Guesses: </p><p id="wrongGuessesBox"></p>
+                <p>Guesses Left: </p>
+                <p id="guessesLeftBox">6</p>
+                <p>Wrong Guesses: </p>
+                <p id="wrongGuessesBox"></p>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-12 border">
                 <p id="hintBox">Hint:</p>
                 <p id="hintBox2"></p>
             </div>
             <div class="col-lg-2 col-md-6 col-sm-12 border">
-                <p>Wins: </p><p id="winsBox">0</p>
-                <p>Losses: </p><p id="lossesBox">0</p>
+                <p>Wins: </p>
+                <p id="winsBox">0</p>
+                <p>Losses: </p>
+                <p id="lossesBox">0</p>
             </div>
         </div>
     </div>
 </body>
+
 </html>

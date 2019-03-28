@@ -122,13 +122,13 @@ function wholeGame() {
     console.log(blanks);
 
     for (var i = 0; i < blanks; i++) {
-        blanksAndCorrect.push("_");        
+        blanksAndCorrect.push("_");
     };
 
     document.getElementById("interface").innerHTML = " " + blanksAndCorrect.join(" ");
     console.log("answerArray:" + answerArray);
     document.onkeyup = function (event) {
-        
+
         var capGuesses = String.fromCharCode(event.keyCode).toUpperCase();
 
         checkLetters(capGuesses);
@@ -148,6 +148,6 @@ function startGame(event) {
 
     document.getElementById("startGame").classList.add("d-none");
     document.getElementById("interface").setAttribute("class", "m-auto");
-    
+
     wholeGame();
 }

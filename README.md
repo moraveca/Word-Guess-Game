@@ -1,1 +1,1 @@
-# Word-Guess-Game
+This is a hangman-style game implementing Javascript to create and change the DOM. It can be found at: https://moraveca.github.io/Word-Guess-Game/
